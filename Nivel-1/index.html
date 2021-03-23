@@ -9,12 +9,33 @@
 </head>
 
 <body>
-    <h1>Exercici 7</h1>
+    <h1>Exercici 8</h1>
     <script>
- let llista  = ['taula', 'cadira', 'ordinador', 'llibreta'];
- for( let i=0; i< llista.length; i++){
-     console.log("L'objecte " + llista[i], " està a la posició " +i);
- }
+        function calculadora(operador, num_1, num_2) {
+            switch (operador) {
+                case "suma":
+                    return num_1 + num_2;
+                    break;
+                case "resta":
+                    return num_1 - num_2;
+                    break
+                case "divisio":
+                    if (num_2 == 0) {
+                        return "Error: Infinit"
+                    }
+                    else {
+                        return num_1 / num_2;
+                    }
+                    break;
+                case "multiplicacio":
+                    return num_1*num_2;
+                    break;
+                default:
+                    return "Prova amb els operadors: suma, resta, divisio, multiplicacio"
+            }
+        }
+        var resultat = calculadora('resta',40,20);
+        console.log(resultat);
     </script>
 </body>
 
